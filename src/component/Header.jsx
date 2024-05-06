@@ -24,7 +24,7 @@ const Header = () => {
                 <div className=" md:absolute md:mx-[0px] mx-auto">
                     <img className='lg:w-[65px] w-[80px]' src={logo} alt="" />
                 </div>
-                <div ref={showref} className="icon text-[30px] fixed top-[23px] right-[20px] z-[1] md:hidden">
+                <div ref={showref} className="icon text-[30px] fixed top-[23px] right-[20px] z-[999] md:hidden">
                     <FaBars/>
                 </div>
                <ul className={`md:block hidden md:flex mx-auto items-center sm:static`}>
@@ -35,7 +35,7 @@ const Header = () => {
                     <li className=' font-sans text-[14px] font-[700] text-[#767676] hover:font-[700] hover:text-[#262626] px-[20px]'>Journal</li>
                 </ul>
                 {show == true ?
-                    <div className="ease-in duration-300  w-[60%] fixed items-center flex top-0 right-0 h-[100%] bg-[rgb(238,238,238)] ">
+                    <div className="ease-in duration-300 z-[998] w-[60%] fixed items-center flex top-0 right-0 h-[100%] bg-[rgb(238,238,238)] ">
                         <ul className="h-[70%] w-[100%] items-center">
                             <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'>Home</li>
                             <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'>Shop</li>
@@ -44,7 +44,7 @@ const Header = () => {
                             <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'>Journal</li>
                         </ul>
                     </div>:
-                    <div className="ease-in duration-300 md:hidden w-[60%] fixed items-center flex top-0 right-[-460px] h-[100%] bg-[rgb(238,238,238)] ">
+                    <div className="ease-in z-[998] duration-300 md:hidden w-[60%] fixed items-center flex top-0 right-[-460px] h-[100%] bg-[rgb(238,238,238)] ">
                     <ul className="h-[70%] w-[100%] items-center">
                         <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'>Home</li>
                         <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'>Shop</li>
