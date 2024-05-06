@@ -41,7 +41,7 @@ const Header = () => {
                     <div className="ease-in duration-300 z-[998] w-[60%] fixed items-center flex top-0 right-0 h-[100%] bg-[rgb(238,238,238)] ">
                         <ul className="h-[70%] relative w-[100%] items-center">
                         <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'>My Account</li>
-                            <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'>Home</li>
+                            <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'><Link to={"/"}>Home</Link></li>
                             <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'>Shop</li>
                             <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'>About</li>
                             <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'>Contacts</li>
