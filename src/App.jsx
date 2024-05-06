@@ -6,10 +6,12 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
+import Crat from "./page/Crat";
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route>
     <Route path="/" element={<Home/>}></Route>
+    <Route path="/cart" element={<Crat/>}></Route>
   </Route>
 ))
 
