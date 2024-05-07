@@ -25,17 +25,33 @@ const ProdectSlick = () => {
     <div className="container mx-auto">
  <div className="slider-container">
       <Slider {...settings}>
-        <div className="w-1/2 h-[190px] lg:h-[250px] xl:h-[310px] 2xl:h-[380px] p-[5px] bg-[#fff] Prodect_box">
-            <img src={prodectimg} className='h-[100%]' alt="" />
+        <div className=" h-[220px] sm:h-[240px] lg:h-[320px] bg-[#fff] xl:h-[390px] 2xl:h-[470px] p-[5px] bg-[#fff] Prodect_box">
+            <img src={prodectimg} className='h-[80%] '  alt="" />
+            <div className="name flex justify-between">
+                <h2 className="text-[13px] md:text-[20px] w-[70%]" >Basic Crew  Neck Tee</h2>
+                <span className="font-[400] text-[#767676] text-[13px] md:text-[20px]">$44.00</span>
+            </div>
         </div>
-        <div className="w-1/2 h-[190px] lg:h-[250px] xl:h-[310px] 2xl:h-[380px] p-[5px] bg-[#fff] Prodect_box">
-            <img src={prodectimg} className='h-[100%]' alt="" />
+        <div className=" h-[220px] sm:h-[240px] lg:h-[320px] bg-[#fff] xl:h-[390px] 2xl:h-[470px] p-[5px] bg-[#fff] Prodect_box">
+            <img src={prodectimg} className='h-[80%] '  alt="" />
+            <div className="name flex justify-between">
+                <h2 className="text-[13px] md:text-[20px] w-[70%]" >Basic Crew  Neck Tee</h2>
+                <span className="font-[400] text-[#767676] text-[13px] md:text-[20px]">$44.00</span>
+            </div>
         </div>
-        <div className="w-1/2 h-[190px] lg:h-[250px] xl:h-[310px] 2xl:h-[380px] p-[5px] bg-[#fff] Prodect_box">
-            <img src={prodectimg} className='h-[100%]' alt="" />
+        <div className=" h-[220px] sm:h-[240px] lg:h-[320px] bg-[#fff] xl:h-[390px] 2xl:h-[470px] p-[5px] bg-[#fff] Prodect_box">
+            <img src={prodectimg} className='h-[80%] '  alt="" />
+            <div className="name flex justify-between">
+                <h2 className="text-[13px] md:text-[20px] w-[70%]" >Basic Crew  Neck Tee</h2>
+                <span className="font-[400] text-[#767676] text-[13px] md:text-[20px]">$44.00</span>
+            </div>
         </div>
-        <div className="w-1/2 h-[190px] lg:h-[250px] xl:h-[310px] 2xl:h-[380px] p-[5px] bg-[#fff] Prodect_box">
-            <img src={prodectimg} className='h-[100%]' alt="" />
+        <div className=" h-[220px] sm:h-[240px] lg:h-[320px] bg-[#fff] xl:h-[390px] 2xl:h-[470px] p-[5px] bg-[#fff] Prodect_box">
+            <img src={prodectimg} className='h-[80%] '  alt="" />
+            <div className="name flex justify-between">
+                <h2 className="text-[13px] md:text-[20px] w-[70%]" >Basic Crew  Neck Tee</h2>
+                <span className="font-[400] text-[#767676] text-[13px] md:text-[20px]">$44.00</span>
+            </div>
         </div>
       </Slider>
     </div>
