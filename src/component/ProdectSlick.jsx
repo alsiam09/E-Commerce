@@ -50,7 +50,7 @@ const ProdectSlick = () => {
  <div className="slider-container">
       <Slider {...settings}>
         <div className=" relative p-[5px] bg-[#fff] Prodect_box">
-            <span className=' absolute top-[20px] left-[24px] py-[9px] px-[32px] bg-[#262626] text-[#fff] text-[16px] font-[700]'>New</span>
+            <span className='text-[10px] py-[5px] px-[12px] absolute top-[20px] left-[24px] md:py-[9px] md:px-[32px] bg-[#262626] text-[#fff] md:text-[16px] md:font-[700]'>New</span>
             <img src={prodectimg} className=' '  alt="" />
             <div className="name flex justify-between">
                 <h2 className="text-[13px] md:text-[20px] w-[70%]" >Basic Crew  Neck Tee</h2>
@@ -58,7 +58,7 @@ const ProdectSlick = () => {
             </div>
         </div>
         <div className=" relative p-[5px] bg-[#fff] Prodect_box">
-            <span className=' absolute top-[20px] left-[24px] py-[9px] px-[32px] bg-[#262626] text-[#fff] text-[16px] font-[700]'>New</span>
+            <span className='text-[10px] py-[5px] px-[12px] absolute top-[20px] left-[24px] md:py-[9px] md:px-[32px] bg-[#262626] text-[#fff] md:text-[16px] md:font-[700]'>New</span>
             <img src={prodectimg} className=' '  alt="" />
             <div className="name flex justify-between">
                 <h2 className="text-[13px] md:text-[20px] w-[70%]" >Basic Crew  Neck Tee</h2>
@@ -66,7 +66,7 @@ const ProdectSlick = () => {
             </div>
         </div>
         <div className=" relative p-[5px] bg-[#fff] Prodect_box">
-            <span className=' absolute top-[20px] left-[24px] py-[9px] px-[32px] bg-[#262626] text-[#fff] text-[16px] font-[700]'>New</span>
+            <span className='text-[10px] py-[5px] px-[12px] absolute top-[20px] left-[24px] md:py-[9px] md:px-[32px] bg-[#262626] text-[#fff] md:text-[16px] md:font-[700]'>New</span>
             <img src={prodectimg} className=' '  alt="" />
             <div className="name flex justify-between">
                 <h2 className="text-[13px] md:text-[20px] w-[70%]" >Basic Crew  Neck Tee</h2>
@@ -74,7 +74,7 @@ const ProdectSlick = () => {
             </div>
         </div>
         <div className=" relative p-[5px] bg-[#fff] Prodect_box">
-            <span className=' absolute top-[20px] left-[24px] py-[9px] px-[32px] bg-[#262626] text-[#fff] text-[16px] font-[700]'>New</span>
+            <span className='text-[10px] py-[5px] px-[12px] absolute top-[20px] left-[24px] md:py-[9px] md:px-[32px] bg-[#262626] text-[#fff] md:text-[16px] md:font-[700]'>New</span>
             <img src={prodectimg} className=' '  alt="" />
             <div className="name flex justify-between">
                 <h2 className="text-[13px] md:text-[20px] w-[70%]" >Basic Crew  Neck Tee</h2>
