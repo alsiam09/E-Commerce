@@ -1,0 +1,30 @@
+.slick-dots{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50px;
+
+}
+.slick-dots li{
+    color: #ffffff00;
+    height: 50px;
+    padding: 15px 10px;
+}
+.slick-dots .slick-active{
+    border-right: 3px solid #262626 !important;
+    color: #262626 !important;
+}
+@media (max-width:768px){
+    .slick-dots{
+        left: 10px !important;
+    }
+    .slick-dots li{
+        color: #ffffff00;
+        height: 30px;
+        padding: 1px !important;
+    }
+    .slick-dots .slick-active{
+        border-right: 3px solid #262626 !important;
+        color: #262626 !important;
+    }
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import Bannerlogo from '../assets/Banner.png'
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
+import './Banner.css'
 import { RiNumber2 } from "react-icons/ri";
 import { TbTruckDelivery } from "react-icons/tb";
 import { MdRefresh } from "react-icons/md";

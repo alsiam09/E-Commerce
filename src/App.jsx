@@ -1,5 +1,6 @@
 import Home from "./page/Home"
 import './App.css'
+import "slick-carousel/slick/slick.css";
 import {
   createBrowserRouter,
   createRoutesFromElements,
