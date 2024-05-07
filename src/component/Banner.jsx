@@ -9,7 +9,9 @@ const Banner = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 1000,
+        autoplay: true,
+        autoplayspeed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
@@ -25,7 +27,6 @@ const Banner = () => {
         customPaging: i => (
           <div
             style={{
-              borderRight : "3px #fff solid",
             }}
           >
             0{i + 1}
@@ -47,10 +48,12 @@ const Banner = () => {
                     </div>
                 </Slider>
             </div>
-            <div className="container mx-auto flex items-center justify-between">
+            <div className="md:py-[30px] py-[20px] border-b-[1px] border-[#F0F0F0]">
+            <div className="container  mx-auto flex items-center justify-between">
             <div className="item flex  items-center"><div className=" pr-[10px] icon font-bold text-[20px] md:text-[30px] text-[#000]"><RiNumber2/></div><span className=' text-[10px] md:text-[16px] text-[#000] font-sans'>Two years warranty</span></div>
-            <div className="item flex  items-center"><div className=" pr-[10px] icon font-bold text-[20px] md:text-[30px] text-[#000]"><TbTruckDelivery/></div><span className=' text-[10px] md:text-[16px] text-[#000] font-sans'>Two years warranty</span></div>
-            <div className="item flex  items-center"><div className=" pr-[10px] icon font-bold text-[20px] md:text-[30px] text-[#000]"><MdRefresh/></div><span className=' text-[10px] md:text-[16px] text-[#000] font-sans'>Two years warranty</span></div>
+            <div className="item flex  items-center"><div className=" pr-[10px] icon font-bold text-[20px] md:text-[30px] text-[#000]"><TbTruckDelivery/></div><span className=' text-[10px] md:text-[16px] text-[#000] font-sans'>Free shipping</span></div>
+            <div className="item flex  items-center"><div className=" pr-[10px] icon font-bold text-[20px] md:text-[30px] text-[#000]"><MdRefresh/></div><span className=' text-[10px] md:text-[16px] text-[#000] font-sans'>Return policy in 30 days</span></div>
+            </div>
             </div>
         </section>
     )

@@ -59,7 +59,7 @@ const Navitem = () => {
             </ul>} 
             </div>
             <div ref={cartref} className="cart relative text-[20px]"><FaShoppingCart/>
-              {showcart && <div className=" w-[360px] absolute top-[60px] right-0 p-[1px] bg-[#F0F0F0]">
+              {showcart && <div className=" w-[360px] z-[999] absolute top-[60px] right-0 p-[1px] bg-[#F0F0F0]">
                 <div className="prodect items-center justify-between flex w-[100%] h-[120px] bg-[#F5F5F3] p-[20px]">
                   <img className='h-[80px] w-[80px]' src={prodectlogo} alt="" />
                   <div className="detal items-center px-[20px]">
