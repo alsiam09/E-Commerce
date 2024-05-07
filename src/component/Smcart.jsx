@@ -14,12 +14,12 @@ const Smcart = () => {
         </div>
         <div className="one_box mb-[121px]">
         <div className="prodect my-[5px] items-center justify-between flex w-[100%] h-[120px] bg-[#F5F5F3] p-[20px]">
-        <img className='h-[80px] w-[80px]' src={prodectlogo} alt="" />
-        <div className="detal items-center px-[20px]">
+        <img className='h-[80px] w-[80px]' src={prodectlogo} alt=""  /> 
+        <div className="detal items-center px-[20px]" >
           <h2 className='font-sans text-[14px] font-[700]'>i Phone 15 Pro Max</h2>
           <span className='font-sans text-[14px] font-[700]'>$1292</span>
         </div>
-        <div className="delet_item "><IoMdClose /></div>
+        <div className="delet_item "><IoMdClose /></div> 
       </div>
         </div>
       </div>
