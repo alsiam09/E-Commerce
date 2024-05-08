@@ -1,6 +1,7 @@
 import Home from "./page/Home"
 import './App.css'
 import "slick-carousel/slick/slick.css";
+import { useState } from "react";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -17,6 +18,8 @@ const router = createBrowserRouter(createRoutesFromElements(
 ))
 
 function App() {
+  
+
 
   return (
     <>

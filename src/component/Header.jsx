@@ -9,7 +9,6 @@ const Header = () => {
     let [show, setshow] = useState(false)
 
     let showref = useRef()
-
     useEffect(()=>{
         document.addEventListener( "click" , (e)=>{
             if (showref.current.contains(e.target) == true) {
@@ -18,6 +17,7 @@ const Header = () => {
                 setshow(false)
             }
         })
+
     },[show])
 
     return (
