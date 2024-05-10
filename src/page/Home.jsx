@@ -7,6 +7,7 @@ import ProdectSlick from '../component/ProdectSlick'
 import ProdectPart1 from '../component/ProdectPart1'
 import Loading from '../component/Loading'
 import Add_2 from '../component/Add_2'
+import Footer from '../component/Footer'
 
 const Home = () => {
   let [loading , setloading] = useState(true)
@@ -27,6 +28,7 @@ const Home = () => {
         <ProdectPart1/>
         <Add_2/>
         <ProdectPart1/>
+        <Footer/>
         </>
         :<Loading/>
         }
