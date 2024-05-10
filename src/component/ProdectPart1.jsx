@@ -11,7 +11,7 @@ const ProdectPart1 = () => {
   let prodect = useContext(apiData)
   return (
     <section>
-        <div className="container mx-auto lg:py-[120px] py-[60px]">
+        <div className="container mx-auto lg:py-[120px] py-[30px]">
         <h2 className=' text-[30px] ml-1 font-sans lg:text-[39px] font-[700] pb-[20px] lg:pb-[48px]'>New Arrivals</h2>
         <div className="flex justify-between flex-wrap">
         {prodect.map((prodects)=>(
