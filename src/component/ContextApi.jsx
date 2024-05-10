@@ -6,7 +6,7 @@ let apiData = createContext()
 const ContextApi = ({children}) => {
     let [info , setinfo ] = useState([])
     let getdata = () => axios.get("https://dummyjson.com/products").then((Response)=>{
-        setinfo(Response.data.products)
+      setinfo(Response.data.products)
     })
     useEffect(()=>{
         getdata()

@@ -9,6 +9,7 @@ import {
   Route,
 } from "react-router-dom";
 import Crat from "./page/Crat";
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route>

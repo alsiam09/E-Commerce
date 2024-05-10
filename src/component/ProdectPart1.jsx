@@ -6,6 +6,7 @@ import { GiEternalLove } from "react-icons/gi";
 import { GoGitCompare } from "react-icons/go";
 import { FaShoppingCart } from "react-icons/fa";
 import { apiData } from './ContextApi';
+import Skeleton from 'react-loading-skeleton'
 const ProdectPart1 = () => {
   let prodect = useContext(apiData)
   return (
