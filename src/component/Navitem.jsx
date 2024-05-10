@@ -33,7 +33,7 @@ const Navitem = () => {
     })
   },[showcate,showpro,showcart])
   return (
-    <section className='bg-[#F5F5F3]'>
+    <section className='bg-[#F5F5F3] mt-[80px]'>
         <div className="container justify-center md:p-0 p-[20px] md:h-[100px] md:justify-between md:flex mx-auto">
         <div ref={cateref} className="Category md:w-[25%] justify-center mb-[20px] md:mb-0 md:justify-start items-center gap-x-[10px] flex relative " >
             <div className="icon"><FaBars/></div>
