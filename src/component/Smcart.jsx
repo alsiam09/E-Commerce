@@ -12,7 +12,7 @@ const Smcart = () => {
             <span className='border-[1px] border-[#262626] py-[16px] px-[40px] font-sans font-[700] text-[14px] bg-[#262626] text-white'>Checkout</span>
           </div>
         </div>
-        <div className="one_box mb-[121px]">
+        <div className="pt-[80px] one_box mb-[121px]">
         <div className="prodect my-[5px] items-center justify-between flex w-[100%] h-[120px] bg-[#F5F5F3] p-[20px]">
         <img className='h-[80px] w-[80px]' src={prodectlogo} alt=""  /> 
         <div className="detal items-center px-[20px]" >

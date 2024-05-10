@@ -70,8 +70,8 @@ const ProdectSlick = () => {
                         </div>
                       </div>
                       <div className="name flex justify-between">
-                        <h2 className="text-[13px] lg:text-[20px] w-[70%]" >Basic Crew  Neck Tee <span className='block text-[12px] lg:text-[16px] font-sans text-[#767676]' >Back</span></h2>
-                        <span className="font-[400] text-[#767676] text-[13px] lg:text-[20px]">$44.00</span>
+                        <h2 className="text-[13px] lg:text-[20px] w-[70%]" >{prodects.title}<span className='block text-[12px] lg:text-[16px] font-sans text-[#767676]' >{prodects.brand}</span></h2>
+                        <span className="font-[400] text-[#767676] text-[13px] lg:text-[20px]">${prodects.price}</span>
                       </div>
                     </div>
           ))}
