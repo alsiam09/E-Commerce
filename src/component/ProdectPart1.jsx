@@ -15,7 +15,7 @@ const ProdectPart1 = () => {
         <h2 className=' text-[30px] ml-1 font-sans lg:text-[39px] font-[700] pb-[20px] lg:pb-[48px]'>New Arrivals</h2>
         <div className="flex justify-between flex-wrap">
         {prodect.map((prodects)=>(
-                      <div className=" w-[48%] md:w-[24%] p-[5px] bg-[#fff] Prodect_box">
+                      <div className=" p-[10px] my-[5px] md:p-[0px] md:border-[0px] rounded-[5px] border-[#262626] border-[1px] w-[48%] md:w-[24%] p-[5px] bg-[#fff] Prodect_box">
                       <div  className="img relative group overflow-hidden">
                         <span className='text-[10px] py-[5px] px-[12px] absolute top-[20px] left-[24px] lg:py-[9px] lg:px-[32px] bg-[#262626] text-[#fff] lg:text-[16px] lg:font-[700]'>New</span>
                         <img  src={prodects.thumbnail} className='  w-[100%] h-[160px] lg:h-[240px] xl:h-[260px] 2xl:h-[330px]' alt="" />
