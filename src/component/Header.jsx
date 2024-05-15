@@ -32,8 +32,8 @@ const Header = () => {
                     <FaBars/>
                 </div>
                 <ul className={`md:block hidden md:flex mx-auto items-center sm:static`}>
-                    <li className=' font-sans text-[14px] font-[700] text-[#767676] hover:font-[700] hover:text-[#262626] px-[20px]'>Home</li>
-                    <li className=' font-sans text-[14px] font-[700] text-[#767676] hover:font-[700] hover:text-[#262626] px-[20px]'>Shop</li>
+                    <li className=' font-sans text-[14px] font-[700] text-[#767676] hover:font-[700] hover:text-[#262626] px-[20px]'><Link to={'/'}>Home</Link></li>
+                    <li className=' font-sans text-[14px] font-[700] text-[#767676] hover:font-[700] hover:text-[#262626] px-[20px]'><Link to={"/prodect"}>Shop</Link></li>
                     <li className=' font-sans text-[14px] font-[700] text-[#767676] hover:font-[700] hover:text-[#262626] px-[20px]'>About</li>
                     <li className=' font-sans text-[14px] font-[700] text-[#767676] hover:font-[700] hover:text-[#262626] px-[20px]'>Contacts</li>
                     <li className=' font-sans text-[14px] font-[700] text-[#767676] hover:font-[700] hover:text-[#262626] px-[20px]'>Journal</li>
@@ -44,7 +44,7 @@ const Header = () => {
                         <ul className="h-[70%] relative w-[100%] items-center">
                         <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'>My Account</li>
                             <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'><Link to={"/"}>Home</Link></li>
-                            <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'>Shop</li>
+                            <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'><Link to={"/prodect"}>Shop</Link></li>
                             <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'>About</li>
                             <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'>Contacts</li>
                             <li className=' px-[30px] hover:bg-[#fff] mx-[10px] rounded-[20px] my-[2px] py-[10px] font-sans text-[16px] font-[700] text-[#000000] hover:font-[700] hover:text-[#262626] px-[20px]'>Journal</li>

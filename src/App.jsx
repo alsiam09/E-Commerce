@@ -10,11 +10,14 @@ import {
 } from "react-router-dom";
 import Crat from "./page/Crat";
 import 'react-loading-skeleton/dist/skeleton.css'
+import Rootlayout from "./page/Rootlayout";
+import Prodect from "./page/Prodect";
 
 const router = createBrowserRouter(createRoutesFromElements(
-  <Route>
+  <Route element={<Rootlayout/>}>
     <Route path="/" element={<Home/>}></Route>
     <Route path="/cart" element={<Crat/>}></Route>
+    <Route path="/prodect" element={<Prodect/>}></Route>
   </Route>
 ))
 

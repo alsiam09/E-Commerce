@@ -18,20 +18,12 @@ const Home = () => {
   },)
   return (
     <>
-        {loading == false
-        ?<>
-        <Header/>
-        <Navitem/>
         <Banner/>
         <Adds/>
         <ProdectSlick/>
         <ProdectPart1/>
         <Add_2/>
         <ProdectPart1/>
-        <Footer/>
-        </>
-        :<Loading/>
-        }
     </>
   )
 }
