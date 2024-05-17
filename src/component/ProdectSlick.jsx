@@ -7,6 +7,7 @@ import { GiEternalLove } from "react-icons/gi";
 import { GoGitCompare } from "react-icons/go";
 import { FaShoppingCart } from "react-icons/fa";
 import { apiData } from './ContextApi';
+import { Link } from 'react-router-dom';
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -57,7 +58,8 @@ const ProdectSlick = () => {
       <div className="slider-container">
         <Slider {...settings}>
           {prodect.map((prodects)=>(
-                      <div className=" p-[5px] bg-[#fff] Prodect_box">
+              <Link to={'/prodect'}>
+                 <div className=" p-[5px] bg-[#fff] Prodect_box">
                       <div  className="img relative group overflow-hidden">
                         <span className='text-[10px] py-[5px] px-[12px] absolute top-[20px] left-[24px] lg:py-[9px] lg:px-[32px] bg-[#262626] text-[#fff] lg:text-[16px] lg:font-[700]'>New</span>
                         <img  src={prodects.thumbnail} className='  w-[100%] h-[160px] lg:h-[240px] xl:h-[260px] 2xl:h-[330px]' alt="" />
@@ -74,6 +76,7 @@ const ProdectSlick = () => {
                         <span className="font-[400] text-[#767676] text-[13px] lg:text-[20px]">${prodects.price}</span>
                       </div>
                     </div>
+              </Link>
           ))}
         </Slider>
       </div>
