@@ -4,11 +4,10 @@ import { GiEternalLove } from "react-icons/gi";
 import { GoGitCompare } from "react-icons/go";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-const Post = () => {
-    let prodects = useContext(apiData)
+const Post = ({AllData}) => {
   return (
     <>
-      {prodects.map((prodect) => (
+      {AllData.map((prodect) => (
                    <Link to={`/prodect/${prodect.id}` } className=" p-[10px] my-[5px] md:p-[0px] md:border-[0px] rounded-[5px] border-[#262626] border-[1px] w-[48%] md:w-[33.3333%] md:p-[10px] p-[5px] bg-[#fff] Prodect_box">
                   <div className="img relative group overflow-hidden">
                     <span className='text-[10px] py-[5px] px-[12px] absolute top-[20px] left-[24px] lg:py-[9px] lg:px-[32px] bg-[#262626] text-[#fff] lg:text-[16px] lg:font-[700]'>New</span>

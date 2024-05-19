@@ -7,9 +7,31 @@ import { BsGridFill } from "react-icons/bs";
 import { CiGrid2H } from "react-icons/ci";
 import { Link } from 'react-router-dom';
 import Post from './pagination/Post';
-
-
+import { apiData } from './ContextApi';
+import PageNasion from "./pagination/PageNasion";
 const ProdectPageItem = () => {
+  let data = useContext(apiData)
+  let [currentPage , setCurrentPage] = useState(1)
+  let [perPage , setPerpage] = useState(6)
+
+  let lastPage = currentPage * perPage
+
+  let firstPage = lastPage - perPage 
+
+  let AllData = data.slice( firstPage , lastPage)
+
+  let PageNumder = [];
+
+  
+  for ( let i = 0 ; i < Math.ceil(data.length / perPage); i++) {
+    PageNumder.push(i)
+  };
+
+  let paginate = (PageNumber) => {
+    setCurrentPage(PageNumber + 1);
+  }
+
+
   let [colshow , setcolshow] = useState(false)
   let color =()=>{
     setcolshow(!colshow)
@@ -23,7 +45,7 @@ const ProdectPageItem = () => {
       <div className="container mx-auto">
         <div className="Page_head_line py-[40px] md:py-[130px]">
           <h1 className=' font-sans font-[700] text-[40px] md:text-[49px] text-[#262626] ' >Prodect</h1>
-          <span className='text-[12px] font-[400] font-sans text-[#767676]' >Home > Prodect</span>
+          <span className='text-[12px] font-[400] font-sans text-[#767676]' >Home Prodect</span>
         </div>
         <div className="main_box flex justify-between">
           <div className="catagory md:w-[30%]">
@@ -32,8 +54,8 @@ const ProdectPageItem = () => {
                 <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
                 <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
                 <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
+                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[2[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
+                <li className='font-[400] text-[#767676] text-[16px] font-sans py-1px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
               </ul>
               <ul>
                 <li className='font-[700] text-[#262626] text-[20px] font-sans pb-[21px]' onClick={color} >{colshow == true ? <div className="H  flex items-center justify-between w-[90%]">Shop by Category <IoMdArrowDropup /> </div> : <div className="h  flex items-center justify-between w-[90%]">Shop by Category<IoMdArrowDropdown/></div> }</li>
@@ -90,8 +112,9 @@ const ProdectPageItem = () => {
               </div>
             </div>
             <div className="prodects flex flex-wrap">
-              <Post/>
+              <Post AllData={AllData}/>
             </div>
+            <PageNasion PageNumder={PageNumder} paginate={paginate}/>
           </div>
         </div>
       </div>
