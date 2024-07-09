@@ -114,7 +114,7 @@ const ProdectPageItem = () => {
             <div className="prodects flex flex-wrap">
               <Post AllData={AllData}/>
             </div>
-            <PageNasion PageNumder={PageNumder} paginate={paginate}/>
+            <PageNasion PageNumder={PageNumder} paginate={paginate} currentPage={currentPage}/>
           </div>
         </div>
       </div>
