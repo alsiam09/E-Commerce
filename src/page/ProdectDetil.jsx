@@ -1,13 +1,14 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState , useRef  } from 'react'
 import { useParams } from 'react-router-dom'
 import { FaStar } from "react-icons/fa";
 import { FaStarHalf } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { AddToCart } from '../component/slice/prodectslice';
-
-
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const ProdectDetil = () => {
   let ProdectId = useParams()
   let dispatch = useDispatch()
@@ -34,14 +35,64 @@ const ProdectDetil = () => {
   let HandleAddToCart =(item)=>{
     dispatch(AddToCart({...item , qun: 1}))
   }
+  let sliderRef = useRef(null);
+  const next = () => {
+    sliderRef.slickNext();
+  };
+  const previous = () => {
+    sliderRef.slickPrev();
+  };
 
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+
+  };
+  var satSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+
+  };
   return (
     <section>
       <div className="container mx-auto">
          <div className="proimgsbox flex flex-wrap">
-          { imgitem.map((imgs)=>(
-            <img className='w-[50%] h-[500px] p-[10px]'  src={imgs} alt="" />
+          <div className="main w-[100%]">
+            {imgitem.length > 1 ?
+          <Slider className='w-[500px] h-[500px] mx-auto'    ref={slider => {
+          sliderRef = slider;
+        }}
+        {...settings}>
+          {imgitem.map((imgs)=>(
+            <img className='w-[500px] h-[500px]' src={imgs} alt="" />
           ))}
+    </Slider>
+
+          : 
+          imgitem.map((imgs)=>(
+            <img className='w-[700px] mx-auto h-[500px]' src={imgs} alt="" />
+          ))
+            }
+    <div className="box ">
+
+
+    </div>
+
+    <div  style={{ textAlign: "center" }}>  
+        <button className="button w-[100px] h-[40px] text-[#fff] font-[600] text-[15px] bg-[#000]" onClick={previous}>
+        Previous
+        </button>
+        <button className="button w-[100px] h-[40px] text-[#fff] font-[600] text-[15px] bg-[green]" onClick={next}>
+          Next
+        </button>
+      </div>
+          </div>
          </div>
          <div className="ProD px-[10px]">
           <h2 className=' font-sans font-[700] text-[39px] py-[10px] text-[#262626]'>Prodect</h2>
