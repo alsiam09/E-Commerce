@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { GiEternalLove } from "react-icons/gi";
 import { GoGitCompare } from "react-icons/go";
 import { FaShoppingCart } from "react-icons/fa";
@@ -9,10 +9,14 @@ import { Link } from 'react-router-dom';
 import Post from './pagination/Post';
 import { apiData } from './ContextApi';
 import PageNasion from "./pagination/PageNasion";
+import { useDispatch, useSelector } from 'react-redux';
 const ProdectPageItem = () => {
   let data = useContext(apiData)
   let [currentPage , setCurrentPage] = useState(1)
   let [perPage , setPerpage] = useState(6)
+  let [ catagory , setcatagory ] = useState([])
+
+  let [ add , setAdd ] = useState([])
 
   let lastPage = currentPage * perPage
 
@@ -23,7 +27,7 @@ const ProdectPageItem = () => {
   let PageNumder = [];
 
   
-  for ( let i = 0 ; i < Math.ceil(data.length / perPage); i++) {
+  for ( let i = 0 ; i < Math.ceil( add.length > 0 ? add :  data.length / perPage); i++) {
     PageNumder.push(i)
   };
 
@@ -40,6 +44,24 @@ const ProdectPageItem = () => {
   let brand =()=>{
     setbrandshow(!brandshow)
   }
+
+  useEffect(()=>{
+    setcatagory([ ...new Set(data.map((item)=>item.category)) ])
+  },[data])
+
+  let addhandle = (citem) => {
+    let CatogoryFilter = data.filter((item)=> item.category == citem)
+    setAdd(CatogoryFilter)
+  }
+
+
+  let [ List , setList ] = useState('')
+
+  let handleChange = () => {
+    setList("activeList");
+  }
+  
+
   return (
     <section>
       <div className="container mx-auto">
@@ -49,48 +71,24 @@ const ProdectPageItem = () => {
         </div>
         <div className="main_box flex justify-between">
           <div className="catagory md:w-[30%]">
-              <ul>
-                <li className='font-[700] text-[#262626] text-[20px] font-sans pb-[21px]' >Shop by Category</li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[2[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-1px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
-              </ul>
+   
               <ul>
                 <li className='font-[700] text-[#262626] text-[20px] font-sans pb-[21px]' onClick={color} >{colshow == true ? <div className="H  flex items-center justify-between w-[90%]">Shop by Category <IoMdArrowDropup /> </div> : <div className="h  flex items-center justify-between w-[90%]">Shop by Category<IoMdArrowDropdown/></div> }</li>
                 {colshow == true && <div className="one">
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span className='flex items-center'><div className=" mr-[10px] color h-[10px] w-[10px] rounded-[50%] bg-[#123289]"></div>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span className='flex items-center'><div className=" mr-[10px] color h-[10px] w-[10px] rounded-[50%] bg-[#123289]"></div>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span className='flex items-center'><div className=" mr-[10px] color h-[10px] w-[10px] rounded-[50%] bg-[#123289]"></div>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span className='flex items-center'><div className=" mr-[10px] color h-[10px] w-[10px] rounded-[50%] bg-[#123289]"></div>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span className='flex items-center'><div className=" mr-[10px] color h-[10px] w-[10px] rounded-[50%] bg-[#123289]"></div>Category 2</span><IoIosAdd /></li>
+                  {catagory.map((item)=>(
+                      <li onClick={()=>addhandle(item)} className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span className='flex items-center capitalize'><div className=" mr-[10px] color "></div>{item}</span></li>
+                        
+                    
+                  ))}
                 </div> }
               </ul>
-              <ul>
-                <li className='font-[700] text-[#262626] text-[20px] font-sans pb-[21px]' onClick={brand} >{brand == true ? <div className="H  flex items-center justify-between w-[90%]">Shop by Category <IoMdArrowDropup /> </div> : <div className="h  flex items-center justify-between w-[90%]">Shop by Category<IoMdArrowDropdown/></div> }</li>
-                {brandshow == true && <div className="one">
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
-                </div> }
-              </ul>
-              <ul>
-                <li className='font-[700] text-[#262626] text-[20px] font-sans pb-[21px]' >Shop by Category</li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
-                <li className='font-[400] text-[#767676] text-[16px] font-sans py-[21px] flex justify-between w-[90%] items-center'><span>Category 2</span><IoIosAdd /></li>
-              </ul>
+       
           </div>
           <div className="prodect_item md:w-[70%]">
             <div className="sistambtn flex justify-between">
               <div className="gridmain ml-[10px] justify-between flex w-[12%]">
-                <div className="grid1 text-[20px] p-[10px] border-[1px] border-[#262626] hover:text-[#fff] hover:bg-[#262626]"><BsGridFill /></div>
-                <div className="grid2 text-[20px] p-[10px] border-[1px] border-[#262626] hover:text-[#fff] hover:bg-[#262626]"><CiGrid2H /></div>
+                <div onClick={()=>setList("")} className={` ${List === "" ? "grid2 text-[20px] p-[10px] border-[1px] bg-[#262626] text-[#fff] border-[#262626] hover:text-[#fff] hover:bg-[#262626]" : "grid2 text-[20px] p-[10px] border-[1px] border-[#262626] hover:text-[#fff] hover:bg-[#262626]"} `}><BsGridFill /></div>
+                <div onClick={handleChange} className={` ${List === "activeList" ? "grid2 text-[20px] p-[10px] border-[1px] bg-[#262626] text-[#fff] border-[#262626] hover:text-[#fff] hover:bg-[#262626]" : "grid2 text-[20px] p-[10px] border-[1px] border-[#262626] hover:text-[#fff] hover:bg-[#262626]"} `}><CiGrid2H /></div>
               </div>
               <div className="op flex justify-between w-[40%]">
                 <div className="one items-center flex">
@@ -111,9 +109,7 @@ const ProdectPageItem = () => {
                 </div>
               </div>
             </div>
-            <div className="prodects flex flex-wrap">
-              <Post AllData={AllData}/>
-            </div>
+              <Post List={List} AllData={AllData} add={add}/>
             <PageNasion PageNumder={PageNumder} paginate={paginate} currentPage={currentPage}/>
           </div>
         </div>

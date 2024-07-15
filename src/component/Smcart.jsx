@@ -61,7 +61,7 @@ const Smcart = () => {
             <h2 onClick={()=>handelincremant(index)} className='px-[10px] text-[20px]' >+</h2>
           </div>
           <div className="Total w-[25%] flex justify-end">
-            <h2>{(item.qun)*(item.price)}</h2>
+            <h2>{((item.qun)*(item.price)).toFixed(2)}</h2>
           </div>
         </div>
         ))}
@@ -77,7 +77,7 @@ const Smcart = () => {
         <div className="allItemcheck">
         <div className="Subtotal w-[300px] flex  h-[40px] border-[1px] border-[#262626]">
             <h2 className=" items-center flex   justify-center w-[50%] border-r-[1px] h-[40px] border-[#262626] ">Total</h2>
-            <h2 className=" items-center flex   justify-center w-[50%] h-[40px]">{totalPrice}</h2>
+            <h2 className=" items-center flex   justify-center w-[50%] h-[40px]">{totalPrice.toFixed(3)}</h2>
 
           </div>                                                                          
         </div>
